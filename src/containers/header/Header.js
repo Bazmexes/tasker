@@ -8,7 +8,6 @@ class Header extends React.Component{
 
 
     render(){
-        console.log(this.props)
         return(
             <div className="header">
               <Container>
@@ -30,7 +29,6 @@ class Header extends React.Component{
 }   
 
 function mapStateToProps(state){
-    console.log(state)
     return{
         // tasks: state.headerReducer
     }

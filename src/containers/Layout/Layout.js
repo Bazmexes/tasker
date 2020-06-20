@@ -12,7 +12,7 @@ class Layout extends Component {
           <div className="addTask">
             <form action="">
               <input id="add-task__name" type="text" placeholder="Введите название задачи"/>
-              <input id="add-task__date" type="text"  placeholder="Введите дату" defaultValue={this.props.today}/>
+              <input id="add-task__date" type="text"  placeholder="Введите дату" placeholder={this.props.today}/>
               <input id="add-task__start-at" type="text" placeholder="Время начала"/>
               <a onClick={() =>{this.props.addTask()}} >Сохранить</a>
             </form>
@@ -25,7 +25,9 @@ class Layout extends Component {
 }
 function mapStateToProps(state){
   return{
-    today: state.tasksReducer.today
+    today: state.tasksReducer.today,
+    days: state.tasksReducer.days,
+    tasks: state.tasksReducer.tasks
   }
 }
 function mapDispatchToProps(dispatch){

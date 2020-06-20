@@ -7,7 +7,7 @@ export default function(props){
     return(
         props.countOfTasks.map((task, index) =>{
             return(
-                <Task key={index}nameOfTask={task.nameTask} startAt={task.startAt}/>
+                <Task key={index}nameOfTask={task.nameTask} startAt={task.startAt} id={index}/>
             )
         })
     )
