@@ -1,0 +1,46 @@
+.board__content{
+
+}
+.board__header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    padding: 5px 30px;
+    border-bottom: solid 1px #bbbbbb;
+}
+.board__extra-task_desc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+.board__extra-task-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    button{
+        padding: 15px 40px;
+        background-color: transparent;
+        border-radius: 30px;
+        font-weight: bold;
+    }
+}
+.board__extra-task_text{
+    color: #5740bb;
+    font-weight: bold;
+}
+.board__button_add{
+    border: 2px solid #4ab392;
+}
+.board__button_add:hover{
+    border: 2px solid transparent;
+    background-color: #5740bb;
+    color: #fff;
+}
+.board__days_box{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 100%;
+}
