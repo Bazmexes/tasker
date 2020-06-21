@@ -2,3 +2,74 @@
     background-color: #fff;
     border-radius: 30px;
 }
+.add-task__wrapper{
+    display: flex;
+    justify-content: center;
+    
+}
+.addTask{
+    position: fixed;
+    display: none;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    max-width: 750px;
+    border-radius: 30px;
+    background-color: rgba($color: #5740bb, $alpha: 0.8);
+}
+.add-task__content{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 50px 40px;
+    margin: 40px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+.add-task__h3{
+    h3{
+        color: #000;
+    }
+}
+.add-task__form{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+.add-task__h3{
+        color: #fff;
+}
+.addTask_active{
+    display: grid;
+}
+.add-task_stop-scroll{
+    overflow: hidden;
+}
+.add-task__inputs_div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-column-gap: 5px;
+    input{
+        border: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 5px;
+        background-color: rgba($color: #5740bb, $alpha: 0.8);
+        color: #fff;
+    }
+    input::placeholder{
+        color: #fff;
+    }
+}
+.add-task__buttons_div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-column-gap: 20px;
+    button{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+}

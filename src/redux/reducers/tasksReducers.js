@@ -1,5 +1,6 @@
 
 const day = new  Date().toLocaleDateString();
+
 const inialState = {
     tasks: [
         [{nameTask: "Первая задача", dateTask: "12.12.2020", startAt: "08:50"},{nameTask: "Второя задача", dateTask: "12.12.2020", startAt: "08:20"},{nameTask: "Третья задача", dateTask: "12.12.2020", startAt: "08:40"}],
@@ -11,7 +12,7 @@ const inialState = {
 
 export default function (state = inialState, action){
     switch(action.type){
-        case 'addTask':
+        case 'addTask':{
             console.log(state)
             const nameInput = document.getElementById('add-task__name')
             const startAtInput = document.getElementById('add-task__start-at')
@@ -22,6 +23,7 @@ export default function (state = inialState, action){
                 dateTask: dateInput.value,
                 startAt: startAtInput.value
             }]
+            console.log('state ', state.days)
             const indexOfTask = state.days.indexOf(task[0].dateTask)
             
             // const indexOfTask = state.tasks.findIndex(i => i.dateTask === task[0].dateTask);
@@ -34,14 +36,21 @@ export default function (state = inialState, action){
             }
             console.log(state)
             return {
-                ...state,
-                days: state.days,
                 tasks: state.tasks,
+                today: state.today,
+                days: state.days
             }
+        }
+        case 'addTaskButton':{
+            const form = document.getElementById('addTask')
+            form.classList.toggle('addTask_active')
+            const body = document.querySelector('body')
+            body.classList.toggle('add-task_stop-scroll')
+
+        }
         default:
             return state
     }
-    
 }
 
 
