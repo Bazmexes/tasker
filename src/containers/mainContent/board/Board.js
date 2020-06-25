@@ -2,8 +2,10 @@ import React from 'react';
 import './board.scss'
 import Day from '../../../components/day/Day'
 import {connect} from 'react-redux'
+import TaskModal from '../../../components/TaskModal/TaskModal'
+import {addDay} from '../../../redux/actions/actions'
 class Board extends React.Component{
-    addTaskField(){
+    toggleModal(){
         const form = document.getElementById('addTask')
         form.classList.toggle('addTask_active')
         const body = document.querySelector('body')
@@ -14,6 +16,7 @@ class Board extends React.Component{
         return(
             
             <div className="board">
+                <TaskModal/>
                 <div className="board__content">
                     <div className="board__header">
                         <div className="board__extra-task_desc">
@@ -27,19 +30,18 @@ class Board extends React.Component{
                         </div>
                         <div className="board__extra-task-buttons">
                             <button className="board__button_add" onClick={()=>{
-                                this.addTaskField()
+                                this.toggleModal()
                             }}> + Добавить задачу</button>
                             <button>Напечатать план</button>
                         </div>
                     </div>
                     <div className="board__days_box">
-                        
-                        {this.props.tasks.map( (task,index)=>{
-                            
+                        {this.props.days.map((day, index)=>{
                             return(
-                                <Day key={index} tasks={task}/>
-                            )
+                                <Day fullDate={day} key={index} tasks={this.props.tasks}/>
+                            )           
                         })}
+                        
                     </div>
                     </div>
                 </div>
@@ -48,17 +50,15 @@ class Board extends React.Component{
 }
 
 function mapStateToProps(state){
-    console.log('console log state at mapState',state)
     return{
-        tasks: state.tasksReducer.tasks,
-        today: state.tasksReducer.today,
-        days: state.tasksReducer.days
+        days: state.daysReducer.days,
+        tasks: state.tasksReducer.tasks
     }
 }
 function mapDispatchToProps(dispatch){
     return{
-        addTaskButton: () => dispatch({type: 'addTaskButton'})
+        
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Board)
+export default connect(mapStateToProps, mapDispatchToProps)(Board)  

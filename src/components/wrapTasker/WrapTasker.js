@@ -3,13 +3,17 @@ import Task from '../task/Task'
 
 
 export default function(props){
-    console.log("props of wraper ", props)
+    console.log("wraptasker", props)
     return(
-        props.countOfTasks.map((task, index) =>{
-            return(
-                <Task key={index}nameOfTask={task.nameTask} startAt={task.startAt} id={index}/>
-            )
+        props.tasks.map((task, index)=>{
+            if(task.date === props.fullDate){
+                return(
+                    <Task name={task.name} startAt={task.startAt} key={index}/>
+                )
+            }
+
         })
+        
     )
     
 }
