@@ -1,0 +1,54 @@
+.form-at-column__div{
+    margin-top: 20px;
+    padding: 20px 5px;
+    border-radius: 15px;
+    display: none;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba($color: #5740bb, $alpha: 0.3);
+}
+.form-at-column{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 5px;
+    
+    input{
+        outline: none;
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+    }
+
+
+
+}
+input[placeholder]{
+    padding-left: 5px;
+    font-size: 14px;
+    text-overflow:ellipsis;
+    
+}
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
+.formAtColumn__div_active{
+    display: grid;
+}
+.button_none{
+    display: none;
+    padding-top: 0;
+}
+.button_addTask{
+    margin-top: 20px;
+    padding: 9px 0;
+    background-color: transparent;
+    border: none;
+    color: #929dac;
+    border-radius: 5px;
+}
+.button_addTask:hover{
+    background-color: #ccc6eb;
+    color: #000;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {addDay, addTask} from '../../redux/actions/actions'
+import './taskModal.scss'
 class ModalTask extends React.Component{
   state = {
     name: '',
@@ -23,13 +24,13 @@ class ModalTask extends React.Component{
             <div className="addTask" id="addTask">
               <div className="add-task__content">
                 <div className="add-task__h3">
-                  <h3>Добавить задание</h3>
+                  <h3>Добавить колонку</h3>
                   </div>
-                        <form action=''onSubmit={this.stopReload} className="add-task__form">
+                        <form action='' onSubmit={this.stopReload} className="add-task__form">
                           <div className="add-task__inputs_div">
-                            <input id="add-task__name" type="text" name="name" onChange={this._handleInputChange} placeholder="Введите название задачи"/>
-                            <input id="add-task__date" type="text" name="date" onChange={this._handleInputChange} placeholder="Введите дату" placeholder={this.props.today}/>
-                            <input id="add-task__start-at" type="text" name="startAt" onChange={this._handleInputChange} placeholder="Время начала"/></div>
+                            <input id="add-task__date" type="text" name="date" onChange={this._handleInputChange} placeholder="Введите название колонки"/>
+                            <input id="add-task__name" type="text" name="name" onChange={this._handleInputChange} placeholder="Название задачи"/>
+                            <input id="add-task__start-at" type="text" name="startAt" onChange={this._handleInputChange} placeholder="Время начала задачи"/></div>
                           <div className="add-task__buttons_div">
                             <button id="add-task__button" type="success" onClick={() =>{
                                 this._addTaskButton()

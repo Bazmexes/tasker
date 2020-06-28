@@ -1,20 +1,23 @@
 .day{
-    border: solid 1px #bbbbbb;
-    border-top: none;
-    border-left: none;
+    margin-right: 20px;
+    border-radius: 5px;
     padding-bottom: 20px;
+    min-height: 500px;
+    margin-top: 20px;
+    background-color: #fff;
+    width: 185px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
 }
 .day__header{
     display: grid;
     align-items: center;
     text-align: center;
     box-shadow: 0 5px 15px -15px #000;
+    max-height: 50px;
     p{
         margin: 0;
-        padding: 7px 0 0;
+        padding: 0 0 15px 0;
+        font-weight: bold;
     }
-    h3{
-        margin: 0;
-        padding: 7px 0;
-    }
-}
+}   

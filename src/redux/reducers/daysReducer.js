@@ -1,5 +1,5 @@
 const initialState = {
-    days: ['20.20.2020', '19.22.2992']
+    days: ['Диплом', 'Конференция']
 }
 
 export default function( state = initialState, action){

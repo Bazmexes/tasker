@@ -8,7 +8,6 @@ class Layout extends Component {
     return (
       <div className="layout">
         <main>
-
           { this.props.children }
         </main>
       </div>

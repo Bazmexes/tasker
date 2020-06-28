@@ -1,4 +1,4 @@
-import {ADDDAY, ADDTASK} from './actionsTypes'
+import {ADDDAY, ADDTASK, _TOGGLEISDONE} from './actionsTypes'
 export function addDay(task){
     return{
         type: ADDDAY,
@@ -10,5 +10,12 @@ export function addTask(task){
     return{
         type: ADDTASK,
         payload: task
+    }
+}
+
+export function toggleIsDoneAction(id){
+    return{
+        type: _TOGGLEISDONE,
+        payload: id
     }
 }

@@ -8,13 +8,12 @@ export default function(props){
         props.tasks.map((task, index)=>{
             if(task.date === props.fullDate){
                 return(
-                    <Task name={task.name} startAt={task.startAt} key={index}/>
+                    <Task name={task.name} startAt={task.startAt} taskId={task.id} key={index} isDone={task.taskIsDone}/>
                 )
             }
 
         })
         
     )
-    
 }
 

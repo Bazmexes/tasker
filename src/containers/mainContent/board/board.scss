@@ -40,7 +40,10 @@
     color: #fff;
 }
 .board__days_box{
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    overflow-x: scroll;
+    width: 1060px;
+    padding-left: 20px;
+    display: flex;
     height: 100%;
+    background-color: #f1f1fa;
 }

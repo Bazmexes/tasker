@@ -1,10 +1,10 @@
 import React from 'react'
 import './day.scss'
-import Task from '../task/Task'
 import WrapTasker from '../wrapTasker/WrapTasker'
 import {connect} from 'react-redux'
-
-export default function(props){
+import FormAtColumn from '../FormAtColumn/FormAtColumn'
+import {useDispatch} from 'react-redux'
+function Day(props){
     // console.log("props of day", props)
     // let dayForRender = document.getElementById(props.tasks.dateTask)
     // console.log("daysForRender", dayForRender)
@@ -21,13 +21,15 @@ export default function(props){
             
     //       }
     //       const dayOfWeekString = getWeekDay(dayOfWeekNumber)
+
         return(
-            <div className="day" id='Нужно исправить на динаммический ид'>
-                <div className="day__header" id={props.fullDate} >
+            <div className="day" id={props.fullDate}>
+                <div className="day__header"  >
                     <p>{props.fullDate}</p>
-                    <h3>{}</h3>
+
                 </div>
                 <WrapTasker tasks={props.tasks} fullDate={props.fullDate}/>
+                <FormAtColumn dayId={props.fullDate}/>
             </div>
         )
      }
@@ -38,5 +40,4 @@ export default function(props){
 
 
 
-
-
+export default connect(null, null)(Day) 

@@ -2,8 +2,6 @@ import React from 'react';
 import './board.scss'
 import Day from '../../../components/day/Day'
 import {connect} from 'react-redux'
-import TaskModal from '../../../components/TaskModal/TaskModal'
-import {addDay} from '../../../redux/actions/actions'
 class Board extends React.Component{
     toggleModal(){
         const form = document.getElementById('addTask')
@@ -16,7 +14,6 @@ class Board extends React.Component{
         return(
             
             <div className="board">
-                <TaskModal/>
                 <div className="board__content">
                     <div className="board__header">
                         <div className="board__extra-task_desc">
@@ -31,7 +28,7 @@ class Board extends React.Component{
                         <div className="board__extra-task-buttons">
                             <button className="board__button_add" onClick={()=>{
                                 this.toggleModal()
-                            }}> + Добавить задачу</button>
+                            }}> + Добавить колонку</button>
                             <button>Напечатать план</button>
                         </div>
                     </div>
