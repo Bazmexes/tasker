@@ -23,15 +23,16 @@
 }
 .add-task__h3{
     h3{
-        color: #000;
+        color: #838384;
     }
 }
 .add-task__form{
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-row-gap: 20px;
 }
 .add-task__h3{
-        color: #fff;
+    font-size: 25px;
+    color: #fff;
 }
 .addTask_active{
     display: grid;
@@ -41,19 +42,21 @@
 }
 .add-task__inputs_div{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    grid-column-gap: 5px;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: start;
+    grid-row-gap: 5px;
+    min-width: 400px;
     input{
+        width: 100%;
         border: none;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-radius: 5px;
-        background-color: rgba($color: #5740bb, $alpha: 0.8);
-        color: #fff;
+        padding: 12px 5px;
+        background-color: #e9eff6;
+        border-radius: 15px;
+        color: #000;
     }
     input::placeholder{
-        color: #fff;
+        padding: 12px 5px;
+        color: #838384;
     }
 }
 .add-task__buttons_div{
@@ -62,9 +65,10 @@
     align-items: center;
     grid-column-gap: 20px;
     button{
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 12px 5px;
         border: none;
-        border-radius: 5px;
+        border-radius: 15px;
+        background-color: #5740bb;
+        color: #fff;
     }
 }

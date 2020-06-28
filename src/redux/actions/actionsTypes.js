@@ -1,3 +1,5 @@
 export const ADDTASK = 'addTask'
 export const ADDDAY = 'addDay'
 export const _TOGGLEISDONE = 'toggleIsDone'
+export const _DELETETASK = 'deleteTask'
+export const _DELETEDAY = 'deleteDay'

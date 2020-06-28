@@ -1,45 +1,54 @@
-.board__content{
-
+.board__content {
 }
-.board__header{
+.board__header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     padding: 5px 30px;
     border-bottom: solid 1px #bbbbbb;
 }
-.board__extra-task_desc{
+.board__extra-task_desc {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-items: center;
 }
-.board__extra-task-buttons{
+.board__extra-task-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     align-items: center;
     justify-items: center;
-    button{
+    button {
         padding: 15px 40px;
         background-color: transparent;
         border-radius: 30px;
         font-weight: bold;
     }
+    input {
+        padding: 15px 40px;
+        border-radius: 30px;
+        background-color: #e9eff6;
+        border: none;
+        font-weight: bold;
+    }
+    input[placeholder] {
+        text-align: center;
+    }
 }
-.board__extra-task_text{
+.board__extra-task_text {
     color: #5740bb;
     font-weight: bold;
 }
-.board__button_add{
+.board__button_add {
     border: 2px solid #4ab392;
 }
-.board__button_add:hover{
+.board__button_add:hover {
     border: 2px solid transparent;
     background-color: #5740bb;
     color: #fff;
 }
-.board__days_box{
+.board__days_box {
     overflow-x: scroll;
     width: 1060px;
     padding-left: 20px;
