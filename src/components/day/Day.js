@@ -9,6 +9,7 @@ function Day(props) {
     const dispatch = useDispatch()
 
     const deleteDay = (e) => {
+        console.log("e", e.target)
         dispatch(deleteDayAction(e.target.name))
     }
     if (props.fullDate !== '') {
@@ -16,8 +17,8 @@ function Day(props) {
             <div className='day' id={props.fullDate}>
                 <div className='day__header'>
                     <p>{props.fullDate}</p>
-                    <a name={props.fullDate} onClick={(e) => deleteDay(e)}>
-                        <img src={require('../../images/logos/x.png')} />
+                    <a >
+                        <img name={props.fullDate} onClick={(e) => deleteDay(e)} src={require('../../images/logos/x.png')} />
                     </a>
                 </div>
                 <WrapTasker tasks={props.tasks} fullDate={props.fullDate} />

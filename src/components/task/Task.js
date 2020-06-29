@@ -7,7 +7,6 @@ import {
 import { useDispatch } from 'react-redux'
 export default function Task(props) {
     const dispatch = useDispatch()
-    const updateNameOfTask = () => {}
     const toggleTaskIsDone = (e) => {
         console.log(e.target.name)
         dispatch(toggleIsDoneAction(e.target.name))

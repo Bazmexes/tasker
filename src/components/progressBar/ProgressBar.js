@@ -30,8 +30,10 @@ export default function(props){
   }
   return(
     <div className="progress-bar">
-        <p style={styles}>{dateNow.hours + ':' + dateNow.minutes + ':' + dateNow.seconds}</p>
-        <p>{getWeekDay()}</p>
+        <div className="clock__wrap">
+            <p style={styles}>{dateNow.hours + ':' + dateNow.minutes + ':' + dateNow.seconds}</p>
+            <p>{getWeekDay()}</p>
+        </div>
     </div>
   )
 }

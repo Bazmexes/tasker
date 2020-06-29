@@ -6,6 +6,7 @@
     margin-top: 20px;
     background-color: #fff;
     min-width: 185px;
+    max-width: 185px;
     padding: 15px 20px;
     margin-bottom: 20px;
 }
@@ -22,13 +23,14 @@
         margin: 0;
         font-weight: bold;
         text-align: left;
+        font-size: 20px;
+        max-width: 150px;
     }
     a {
-        padding-left: 20px;
         text-align: right;
     }
     img {
-        height: 9px;
-        width: 9px;
+        height: 15px;
+        width: 15px;
     }
 }

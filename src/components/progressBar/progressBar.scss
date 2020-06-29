@@ -1,17 +1,24 @@
 .progress-bar{
     display: grid;
-    grid-template-rows: 30px 30px;
     justify-items: center;
     align-items: center;
-    background-color: #fff;
     margin: 20px;
-    padding: 20px 5px;
     border-radius: 20px;
     p{
         text-transform: uppercase;
         font-weight: bold;
         font-size: 15px;
     }
+}
+.clock__wrap{
+    display: grid;
+    width: 190px;
+    grid-template-rows: 30px 30px;
+    justify-items: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
 }
 .progress-bar__ring{
     width: 120px;
