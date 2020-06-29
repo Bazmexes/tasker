@@ -4,10 +4,11 @@ import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter } from 'react-router-dom'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware} from 'redux'
 import rootReducer from './redux/rootReducer'
 import { Provider } from 'react-redux'
 import storage from 'redux-persist/lib/storage'
+import reduxThunk from 'redux-thunk'
 import { PersistGate } from 'redux-persist/integration/react'
 import { persistStore, persistReducer } from 'redux-persist'
 
@@ -18,7 +19,7 @@ const persistConfig = {
 }
 const persitedReducer = persistReducer(persistConfig, rootReducer)
 
-const store = createStore(persitedReducer)
+const store = createStore(persitedReducer, applyMiddleware( reduxThunk))
 const persistorStore = persistStore(store)
 const app = (
     <Provider store={store}>

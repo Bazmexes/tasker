@@ -12,10 +12,17 @@ class Board extends React.Component {
     }
     _addNewColumn() {
         const column = document.getElementById('addNewInput').value
-        this.props.addDay(column)
+        if (column === '') {
+            alert('Нужно заполнить название колонки справа')
+        } else {
+            this.props.addDay(column)
+        }
     }
     _stopReload(e) {
         e.preventDefault()
+    }
+    _getDate(){
+        const date = new Date()
     }
     render() {
         console.log('tasks kdaskdajsk', this.props.tasks)

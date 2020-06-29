@@ -11,13 +11,24 @@
 }
 .day__header {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     box-shadow: 0 5px 15px -15px #000;
     max-height: 50px;
+    padding-bottom: 20px;
     p {
         margin: 0;
-        padding: 0 0 15px 0;
         font-weight: bold;
+        text-align: left;
+    }
+    a {
+        padding-left: 20px;
+        text-align: right;
+    }
+    img {
+        height: 9px;
+        width: 9px;
     }
 }

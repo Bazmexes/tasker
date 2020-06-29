@@ -24,6 +24,7 @@
         background-color: transparent;
         border-radius: 30px;
         font-weight: bold;
+        outline: none;
     }
     input {
         padding: 15px 40px;
@@ -33,7 +34,7 @@
         font-weight: bold;
     }
     input[placeholder] {
-        text-align: center;
+        padding-left: 20px;
     }
 }
 .board__extra-task_text {

@@ -1,10 +1,5 @@
-import {
-    ADDDAY,
-    ADDTASK,
-    _TOGGLEISDONE,
-    _DELETETASK,
-    _DELETEDAY,
-} from './actionsTypes'
+import {ADDDAY, ADDTASK, _TOGGLEISDONE, _DELETETASK, _DELETEDAY, _NEWTIME} from './actionsTypes'
+
 export function addDayAction(task) {
     return {
         type: ADDDAY,
@@ -35,5 +30,11 @@ export function deleteDayAction(column) {
     return {
         type: _DELETEDAY,
         payload: column,
+    }
+}
+export function actionNewTime(time) {
+    return{
+        type: _NEWTIME,
+        payload: time
     }
 }

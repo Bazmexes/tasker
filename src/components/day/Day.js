@@ -16,9 +16,9 @@ function Day(props) {
             <div className='day' id={props.fullDate}>
                 <div className='day__header'>
                     <p>{props.fullDate}</p>
-                    <button name={props.fullDate} onClick={(e) => deleteDay(e)}>
-                        Удалить
-                    </button>
+                    <a name={props.fullDate} onClick={(e) => deleteDay(e)}>
+                        <img src={require('../../images/logos/x.png')} />
+                    </a>
                 </div>
                 <WrapTasker tasks={props.tasks} fullDate={props.fullDate} />
                 <FormAtColumn dayId={props.fullDate} />
