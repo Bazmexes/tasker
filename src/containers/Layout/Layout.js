@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import './layout.scss'
 import {connect} from 'react-redux'
-
+import './scss/_mixins.scss'
 class Layout extends Component {
   render() {
     

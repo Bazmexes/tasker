@@ -1,5 +1,5 @@
 import React from 'react'
-import './day.scss'
+import './_day.scss'
 import WrapTasker from '../wrapTasker/WrapTasker'
 import { connect } from 'react-redux'
 import FormAtColumn from '../FormAtColumn/FormAtColumn'
