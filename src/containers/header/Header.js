@@ -3,28 +3,58 @@ import Container from '../../components/container/Container'
 import {NavLink} from 'react-router-dom'
 import './header.scss'
 import {connect} from 'react-redux'
+import Goals from '../mainContent/goals/Goals'
+import Boards from '../../components/Boards/Boards'
 class Header extends React.Component{
 
 
 
     render(){
-        return(
-            <div className="header">
-              <Container>
-              <div className="header__content">
-                  <div className="header__menu">
-                      <div className="header__logo">
-                          <h3>Доска заданий</h3>
+        if(this.props.in === true){
+            return(
+                <div className="header">
+                  <Container>
+                  <div className="header__content">
+                      <div className="header__menu">
+                          <div className="header__logo" style={{paddingTop: "10px"}}>
+                              <h3>Доска заданий</h3>
+                          </div>
+                          <div className="header__box_links">
+                              <NavLink className="header__link" to={'/'}>Доски</NavLink>
+                              <NavLink className="header__link" to={'/about'}>О проекте</NavLink>
+                          </div>
+                          <Goals/>
+                        <Boards/>
+                          
                       </div>
-                      <div className="header__box_links">
-                          <NavLink className="header__link" to={'/'}>Доска</NavLink>
-                          <NavLink className="header__link" to={'/about'}>О проекте</NavLink>
-                      </div>
-                  </div>
+                      
+                    </div>
+                  </Container>
                 </div>
-              </Container>
-            </div>
-        )
+            )
+        }else{
+            return(
+                <div className="header">
+                  <Container>
+                  <div className="header__content">
+                      <div className="header__menu">
+                          <div className="header__logo" style={{paddingTop: "10px"}}>
+                              <h3>Доска заданий</h3>
+                          </div>
+                          <div className="header__box_links">
+                              <NavLink className="header__link" to={'/'}>Доски</NavLink>
+                              <NavLink className="header__link" to={'/about'}>О проекте</NavLink>
+                          </div>
+                          <Goals/>                         
+                      </div>
+                      
+                    </div>
+                  </Container>
+                </div>
+            )
+            
+        }
+
     }
 }   
 

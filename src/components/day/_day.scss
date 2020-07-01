@@ -13,9 +13,11 @@
     margin-bottom: 20px;
 
 }
-@include respond-to($mobile){
+
+@media (max-width: $mobile){
     .day{
-        background-color: #000;
+        min-width: 295px;
+
     }
 }
 

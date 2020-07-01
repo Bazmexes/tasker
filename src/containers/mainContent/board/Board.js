@@ -11,7 +11,7 @@ class Board extends React.Component {
         body.classList.toggle('add-task_stop-scroll')
     }
     _addNewColumn() {
-        const column = document.getElementById('addNewInput').value
+        const column = {column: document.getElementById('addNewInput').value, board: this.props.boardToPrint}
         if (column === '') {
             alert('Нужно заполнить название колонки справа')
         } else {
@@ -24,23 +24,18 @@ class Board extends React.Component {
     _getDate(){
         const date = new Date()
     }
+    
     render() {
-        console.log('tasks kdaskdajsk', this.props.tasks)
+        console.log('tasks kdaskdajsk', this.props.days, this.props.boardToPrint)
         return (
             <div className='board'>
                 <div className='board__content'>
                     <div className='board__header'>
                         <div className='board__extra-task_desc'>
-                            <div
-                                style={{
-                                    display: 'grid',
-                                    gridTemplateColumns: '1fr 1fr',
-                                    alignItems: 'center',
-                                    justifyItems: 'center',
-                                }}>
+                            <div className="board__extra-task_date">
                                 <h3>12-17.08</h3>
                             </div>
-                            <div>
+                            <div className="board__extra-task_p">
                                 <p className=' board__extra-task_text'>
                                     Экстра задание
                                 </p>
@@ -52,6 +47,11 @@ class Board extends React.Component {
                         <form
                             onSubmit={(e) => this._stopReload(e)}
                             className='board__extra-task-buttons'>
+                            
+                            <input
+                                placeholder='Название колонки'
+                                id='addNewInput'
+                            />
                             <button
                                 type='reset'
                                 className='board__button_add'
@@ -60,21 +60,23 @@ class Board extends React.Component {
                                 }}>
                                 + Добавить колонку
                             </button>
-                            <input
-                                placeholder='Название колонки'
-                                id='addNewInput'
-                            />
                         </form>
                     </div>
                     <div className='board__days_box'>
-                        {this.props.days.map((day, index) => {
-                            return (
-                                <Day
-                                    fullDate={day}
-                                    key={index}
-                                    tasks={this.props.tasks}
-                                />
-                            )
+                        {this.props.days.reverse().map((day, index) => {
+                            if(day.board===this.props.boardToPrint){
+                                return (
+                                    <Day 
+                                        fullDate={day.column}
+                                        key={index}
+                                        tasks={this.props.tasks}
+                                    />
+                                )
+                            }else{
+                                console.log(false)
+                                return null
+                            }
+
                         })}
                     </div>
                 </div>
@@ -85,7 +87,7 @@ class Board extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        days: state.daysReducer.days,
+        days: [...state.daysReducer.days],
         tasks: state.tasksReducer.tasks,
     }
 }

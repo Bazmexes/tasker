@@ -1,3 +1,4 @@
+@import "_vars.scss";
 .goals{
     height: 100%;
     background-color: #5740bb;
@@ -8,6 +9,11 @@
     h3{
         text-align: center;
         color: #fff;
+    }
+    @media (max-width: $mobile) {
+        .goals{
+            display: none;
+        }
     }
 }
 .goals__buttons{
@@ -29,4 +35,9 @@
 .goals__button:hover{
     background-color: rgba($color: #fff, $alpha: 0.3);
     border-radius: 5px;
+}
+@media (max-width: $mobile){
+    .goals{
+        display: none;
+    }
 }

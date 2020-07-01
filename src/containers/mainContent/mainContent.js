@@ -13,7 +13,7 @@ class mainContent extends React.Component{
                 <Container>
                     <div className="mainContent__content">
                         <Goals/>
-                        <Board/>
+                        <Board boardToPrint={this.props.boardToPrint}/>
                     </div>
                 </Container>
             </div>

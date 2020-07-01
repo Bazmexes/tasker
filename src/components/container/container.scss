@@ -1,4 +1,10 @@
+@import "_vars.scss";
 .container{
     width: 1350px;
     margin: 0 auto;
+
+    @media (max-width: $mobile){
+        width: 375px;
+        margin: 0 auto;
+    }
 }
