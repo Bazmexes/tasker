@@ -1,5 +1,5 @@
 const initialState = {
-    days: [{column: 'Диплом', board: "govno"}, {column: 'Конференция', board: "dsds"}],
+    days: [],
 }
 
 export default function (state = initialState, action) {

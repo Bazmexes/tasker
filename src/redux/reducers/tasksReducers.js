@@ -1,36 +1,6 @@
-import { act } from 'react-dom/test-utils'
 
 const initialState = {
-    tasks: [
-        {
-            name: 'Первая задача',
-            date: 'Диплом',
-            startAt: '08:40',
-            id: 0,
-            taskIsDone: false,
-        },
-        {
-            name: 'Вторая задача',
-            date: 'Диплом',
-            startAt: '08:40',
-            id: 2,
-            taskIsDone: false,
-        },
-        {
-            name: 'Третья задача',
-            date: 'Конференция',
-            startAt: '08:40',
-            id: 3,
-            taskIsDone: false,
-        },
-        {
-            name: 'Четвертая задача',
-            date: 'Конференция',
-            startAt: '08:40',
-            id: 4,
-            taskIsDone: true,
-        },
-    ],
+    tasks: [],
 }
 
 export default function (state = initialState, action) {

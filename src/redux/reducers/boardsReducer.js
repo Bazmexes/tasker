@@ -1,6 +1,6 @@
 import {_ADDBOARD} from '../actions/actionsTypes'
 const initialState = {
-    boards: ['dsds', 'govno', 'suka']
+    boards: []
 }
 
 export default function (state = initialState, action){

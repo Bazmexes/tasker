@@ -55,7 +55,9 @@ class Board extends React.Component {
                             </button>
                         </form>
                     </div>
+                    
                     <div className='board__days_box'>
+                        
                         {this.props.days.reverse().map((day, index) => {
                             if(day.board===this.props.boardToPrint){
                                 return (
