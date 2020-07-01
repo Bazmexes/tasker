@@ -17,7 +17,7 @@ export default function (state = initialState, action) {
         }
         case 'deleteDay': {
             console.log("action.payload", action.payload)
-            const index = state.days.indexOf(action.payload)
+            const index = state.days.findIndex( item => item.column=== action.payload.column)
             const days = [...state.days]
             days.splice(index, 1)
             return {

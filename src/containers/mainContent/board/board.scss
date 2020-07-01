@@ -17,6 +17,7 @@
     flex-direction: row;
     align-items: center;
     justify-items: center;
+    padding: 10px 0;
 }
 .board__extra-task-buttons {
     display: grid;
@@ -45,6 +46,7 @@
 .board__extra-task_text {
     color: #5740bb;
     font-weight: bold;
+    font-size: 21px;
 }
 .board__button_add {
     border: 2px solid #4ab392;

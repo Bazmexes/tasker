@@ -21,9 +21,7 @@ class Board extends React.Component {
     _stopReload(e) {
         e.preventDefault()
     }
-    _getDate(){
-        const date = new Date()
-    }
+
     
     render() {
         console.log('tasks kdaskdajsk', this.props.days, this.props.boardToPrint)
@@ -32,15 +30,10 @@ class Board extends React.Component {
                 <div className='board__content'>
                     <div className='board__header'>
                         <div className='board__extra-task_desc'>
-                            <div className="board__extra-task_date">
-                                <h3>12-17.08</h3>
-                            </div>
+
                             <div className="board__extra-task_p">
-                                <p className=' board__extra-task_text'>
-                                    Экстра задание
-                                </p>
-                                <p className=' board__extra-task'>
-                                    Описание задания
+                                <p className='board__extra-task_text'>
+                                    {this.props.boardToPrint}
                                 </p>
                             </div>
                         </div>

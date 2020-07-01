@@ -1,8 +1,15 @@
 @import 'vars';
 .board__button{
-    margin-right: 20px;
+    margin-right: 10px;
+    padding: 10px 40px;
+    background-color: transparent;
+    border: solid black 1px;
+    border-radius: 3px;
 }
-
+.board__button:hover{
+    background-color: $purpleColor;
+    color: #fff;
+}
 @media (max-width: $mobile){
     .board__button{
         margin-right: 0;

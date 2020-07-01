@@ -18,7 +18,7 @@ function Day(props) {
                 <div className='day__header'>
                     <p>{props.fullDate}</p>
                     <a >
-                        <img name={props.fullDate} onClick={(e) => deleteDay(e)} src={require('../../images/logos/x.png')} />
+                        <img alt="close" name={props.fullDate} onClick={(e) => deleteDay(e)} src={require('../../images/logos/x.png')} />
                     </a>
                 </div>
                 <WrapTasker tasks={props.tasks} fullDate={props.fullDate} />

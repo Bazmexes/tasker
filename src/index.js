@@ -15,7 +15,7 @@ import { persistStore, persistReducer } from 'redux-persist'
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['tasksReducer', 'daysReducer'],
+    whitelist: ['tasksReducer', 'daysReducer', 'boardsReducer'],
 }
 const persitedReducer = persistReducer(persistConfig, rootReducer)
 

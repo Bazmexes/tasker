@@ -1,4 +1,4 @@
-import {ADDDAY, ADDTASK, _TOGGLEISDONE, _DELETETASK, _DELETEDAY, _NEWTIME} from './actionsTypes'
+import {ADDDAY, ADDTASK, _TOGGLEISDONE, _DELETETASK, _DELETEDAY, _NEWTIME, _ADDBOARD} from './actionsTypes'
 
 export function addDayAction(task) {
     return {
@@ -36,5 +36,11 @@ export function actionNewTime(time) {
     return{
         type: _NEWTIME,
         payload: time
+    }
+}
+export function actionAddBoard(board){
+    return{
+        type: _ADDBOARD,
+        payload: board
     }
 }
