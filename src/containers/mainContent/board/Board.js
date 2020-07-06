@@ -24,6 +24,7 @@ class Board extends React.Component {
 
     
     render() {
+
         console.log('tasks kdaskdajsk', this.props.days, this.props.boardToPrint)
         return (
             <div className='board'>

@@ -8,10 +8,11 @@ import { useDispatch } from 'react-redux'
 export default function Task(props) {
     const dispatch = useDispatch()
     const toggleTaskIsDone = (e) => {
-        console.log(e.target.name)
         dispatch(toggleIsDoneAction(e.target.name))
     }
     const deleteTask = (e) => {
+        console.log("смотри сюд",e.target.name)
+
         dispatch(deleteTaskAction(e.target.name))
     }
     console.log('props task', props.startAt)
@@ -47,8 +48,9 @@ export default function Task(props) {
                         className='task__time'>
                         Выполнено
                     </button>
-                    <button
+                    <button 
                         name={props.taskId}
+                        className="task__time"
                         onClick={(e) => {
                             deleteTask(e)
                         }}>

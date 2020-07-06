@@ -1,7 +1,5 @@
 @import "_vars.scss";
-
-.board__content {
-}
+@import "_mixins.scss";
 
 
 .board__header {
@@ -47,6 +45,7 @@
     color: #5740bb;
     font-weight: bold;
     font-size: 21px;
+    text-transform: uppercase;
 }
 .board__button_add {
     border: 2px solid #4ab392;
@@ -66,22 +65,21 @@
 }
 .board__extra-task_date{
     padding-right: 30px;
-
 }
-@media (max-width: $mobile - 1){
+@include respond-to(mobile) {
+    .board{
+        width: 375px;
+    }
     .board__header{
+        margin-top: 50px;
         display: grid;
-        width: 330px;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 0;
-        padding: 20px;
-        
+        grid-template-rows: 50px 120px;
+        grid-template-columns: none;
     }
     .board__extra-task_desc {
         display: grid;
-        width: 300px;
-        justify-items: start;
-
+        padding: 0;
+        align-items: end;
     }
     .board__extra-task_date{
         display: none;
@@ -89,16 +87,18 @@
     }
     .board__extra-task_p{
         display: grid;
-
+    }
+    .board__extra-task_text{
+        margin: 0;
+        margin-bottom: 20px;
     }
     .board__extra-task-buttons {
-
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 50px 50px;
         grid-template-columns: none;
         justify-items: center;
         align-items: center;
-        grid-row-gap: 10px;
+        padding-bottom: 20px;
         button {
             padding: 15px 20px;
             background-color: transparent;
@@ -106,6 +106,7 @@
             font-weight: bold;
             outline: none;
             width: 200px;
+            margin-top: 20px;
         }
         input {
             padding: 15px 20px;

@@ -25,7 +25,6 @@ class Header extends React.Component{
                           </div>
                           <Goals/>
                         <Boards/>
-                          
                       </div>
                       
                     </div>

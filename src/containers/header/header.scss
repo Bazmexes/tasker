@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
-.header{
-}
-
+@import "_mixins.scss";
 .header__content{
     display: grid;
     align-items: start;
@@ -16,7 +14,6 @@
 
 .header__logo{
     display: grid;
-    flex-direction: row;
     align-items: center;
     justify-items: center;
     background-color: #5740bb;
@@ -48,4 +45,27 @@
 .header__link:hover{
     text-decoration: underline;
     color: #5740bb;
+}
+
+@include respond-to(mobile){
+    .header__menu{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 2fr;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .header__logo{
+        border-radius: 0;
+    }
+    .header__box_links{
+        background-color: #f1f1fa;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    .header__link{
+
+        border: none;
+        padding: 15px 0;    
+    }
 }
