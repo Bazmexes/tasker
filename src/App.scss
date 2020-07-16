@@ -5,4 +5,10 @@
   display: grid;
   justify-items: center;
   align-items: center;
+
+}
+@include respond-to(mobile){
+  .App{
+    padding-bottom: 100px;
+  }
 }
