@@ -15,7 +15,6 @@ export default function Task(props) {
 
         dispatch(deleteTaskAction(e.target.name))
     }
-    console.log('props task', props.startAt)
     if (props.startAt !== '') {
         if (props.isDone) {
             return (
